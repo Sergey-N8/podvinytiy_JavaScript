@@ -91,33 +91,33 @@
 
 const initialData = [
     {
-        product: "Apple iPhone 13",
+        product: "Xiaomi 13 Lite",
         reviews: [
             {
                 id: "1",
-                text: "Отличный телефон! Батарея держится долго.",
+                text: "Точно отражает уровень оставшегося заряда батареи. Быстрая зарядка, быстродействие хорошее.",
             },
             {
                 id: "2",
-                text: "Камера супер, фото выглядят просто потрясающе.",
+                text: "Телефоном очень доволен ребенок. Оригинальный. Можем советовать данного продавца как очень надежного",
             },
         ],
     },
     {
-        product: "Samsung Galaxy Z Fold 3",
+        product: "Google Pixel 8",
         reviews: [
             {
                 id: "3",
-                text: "Интересный дизайн, но дорогой.",
+                text: "Все отлично. Немного смутили озоновские пломбы на коробке, но заводские отрывные пломбы тоже были на месте, так что все в порядке",
             },
         ],
     },
     {
-        product: "Sony PlayStation 5",
+        product: "Apple iPhone 14",
         reviews: [
             {
                 id: "4",
-                text: "Люблю играть на PS5, графика на высоте.",
+                text: "Классный телефон, пришел быстрее чем это было указано при отправлении, продавцу большая благодарность",
             },
         ],
     },
@@ -142,8 +142,8 @@ initialData.forEach(element => {
 
 sendBtn.addEventListener('click', function () {
     try {
-        if (userInput.value.trim().length < 20 || userInput.value.trim().length > 500) {
-            throw new Error('Несоответствующая длина текста')
+        if (userInput.value.trim().length < 50 || userInput.value.trim().length > 500) {
+            throw new Error('Длина введенного отзыва менее 50 или более 500 символов')
         }
         const reviewElem = document.createElement('p');
         reviewElem.textContent = (userInput.value);
